@@ -1,0 +1,26 @@
+<p>user-list works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i=index">
+        <td>{{ user.nombre}}</td>
+        <td>{{ user.email}}</td>
+        <td> 
+            <div class='botones'>
+              <button class="btn btn-warning" (click)='editar(user._id)'> Editar</button>
+              <button class="btn btn-danger" (click)='borrar(user._id)'> Borrar</button>
+            </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
